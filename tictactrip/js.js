@@ -149,7 +149,7 @@ selectionDepart()
 
 //direction des autres page
 function pageCree(){
-    document.location.href='pageCree.html'
+    document.location.href='./AutresPage/pageCree.html'
 }
 
 //ouvert du modal et rendre les champs disabled

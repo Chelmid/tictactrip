@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 
   <head>
 
@@ -18,278 +18,567 @@
     <link rel="stylesheet" href="css.css">
 
     <title>test site trainline</title>
-
   </head>
 
   <body>
-    <div class='img1 img-responsive'>
+  <!--img haut de la page-->
+  <div class='img1 img-responsive'>
+    <!--header menu-->
     <div id='haut' class='barreHeader'>
       <div class='header'>
       <div class='logo'>
-        <a href='#'><div>trainline</div></a>
-        </div>
+        <a href='#'>
+          <div class='logoImg'></div>
+        </a>
+      </div>
       <div class='autres'>
         <div class='headerBouton'>
-      <button class="btn" onclick='pageCree()'>Crée un compte</button>
-      <button class="btn" onclick='pageConnection()'>Se connecter</button>
-    </div>
-      <a href='#aide.html' class='aideHeader'><div >aide</div></a>
+        <button class="btn" onclick='pageCree()'>Crée un compte</button>
+        <button class="btn" onclick='pageCree()'>Se connecter</button>
+      </div>
+      <a href='#aide.html' class='aideHeader'>
+        <div >aide</div>
+      </a>
       <div class='headerOption'>
-      <div style="margin-right:10px"><a href='#choixLangue' class='coutour' onclick='openNav1()'  ><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a></div>
-      <div><a href='#choixmonnaie' class='coutour' onclick='openNav2()'>EUR</a></div>
+        <div style="margin-right:10px">
+          <a href='#choixLangue' class='coutour' onclick='openNav1()'  >
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+          </a>
+        </div>
+        <div>
+          <a href='#choixmonnaie' class='coutour' onclick='openNav2()'>EUR</a>
+        </div>
+      </div>
+      </div>
+      </div>
     </div>
-    </div>
-  </div>
-  </div>
+    <!--titre Header-->
     <div class="titreGros">
-      <h1 class='text-center'>Réservez vos billets de train et de bus.</h1>
-      <h1 class='text-center'> En France et en Europe.</h1>
-      <h3 class='text-center'>Voyagez avec Trainline, leader indépendant de la vente de billets de train et de bus en Europe.</h3>
-    
+      <h1 class='text-center titreUpWhite'>Réservez vos billets de train et de bus.</h1>
+      <h1 class='text-center titreUpWhite'> En France et en Europe.</h1>
+      <h3 class='text-center titreN'>Voyagez avec Trainline, leader indépendant de la vente de billets de train et de bus en Europe.</h3>
     </div>
+    <!--bloc de recherche de villes-->
     <div class='blocrecherche'>
-    <div class='carreRecherche'>
-      <h4 class='titreRS'>Quel est votre trajet ?</h4>
-      <div class='sauteDiv'>
-      <div>
-        <input id='villeDepart' value=''  class='inputDA' oninput="resultatVilleDepart()" onclick='selectionDepart()' placeholder="Saisissez votre gare de départ ..."/>
+      <div class='carreRecherche'>
+        <h4 class='titreRS'>Quel est votre trajet ?</h4>
+        <div class='sauteDiv'>
+          <div>
+          <input id='villeDepart' value=''  class='inputDA' oninput="resultatVilleDepart()" onclick='selectionDepart()' placeholder="Saisissez votre gare de départ ..."/>
+          </div>
+          <div>
+            <input id='villeArriver' value='' class='inputDA' oninput="resultatVilleArriver()" onclick='selectionArriver()' placeholder="Saisissez votre gare d'arriver ...">
+          </div>
+        </div>
+        <div class='sauteDiv'>
+          <input type="text" id='dateDepart' class='inputDA'  placeholder='Aller'>
+          <input type="text" id='dateArriver' class='inputDA' placeholder='Retour'>
+        </div>
+        <div class='sauteDiv'>
+          <input type="text" class='inputAge' placeholder="1 Adulte(26 - 59)"><button class='sup'>+</button>
+        </div>
+        <div>
+          <a href='#' style="color:#01c3a7;margin-right: 20px;">Utiliser un code de réduction</a>
+          <button class="btn">Recherche</button>
+        </div>
       </div>
-      <div>
-        <input id='villeArriver' value='' class='inputDA' oninput="resultatVilleArriver()" onclick='selectionArriver()' placeholder="Saisissez votre gare d'arriver ...">
-      </div>
-    </div>
-      <div class='sauteDiv'>
-      <input type="text" id='dateDepart' class='inputDA'  placeholder='Aller'>
-      <input type="text" id='dateArriver' class='inputDA' placeholder='Retour'>
-    </div>
-    <div class='sauteDiv'>
-      <input type="text" class='inputAge' placeholder="1 Adulte(26 - 59)"><button class='sup'>+</button>
-    </div>
-    <div>
-      <a href='#'>Utiliser un code de réduction</a>
-      <button class="btn">Recherche</button>
-    </div>
-  </div>
-    <div class='carreRecherche'>
+      <div class='carreRecherche'>
         <h4 id='titreDepart' class='titreRS'>Choisissez une gare de départ</h4>
         <h4 id='titreArriver' class='titreRS'>Choisissez une gare d’arrivée</h4>
         <div id='test' class='top'></div>
         <div id='test2' class='top'></div>
         <div id='test3'></div>
         <div id='test4'></div>
+        <button class="btn">+ VIA</button>
         <div class='ui-datepicker'></div>
       </div>
     </div>
   </div>
-
-    <div id="mySidenavLangue" class="sidenav">
-        <div><h3>Sélectionner un pays</h3></div>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
-        <div class='langueAll'>
-        <div class='langueE'>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-            <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
+  <!--menu droite cacher pour les langues-->
+  <div id="mySidenavLangue" class="sidenav">
+    <div class='sidTitre'>
+      <h3>Sélectionner un pays</h3>
+    </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+    <div class='langueAll'>
+      <div class='langueE'>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+            <a href='#choixLangue' onclick='openNav()'><div class='rangerPaysMonnaie'><img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'><h5> Couronnes tchèques (Kč)</h5></div></a>
+            <a href='#choixLangue' onclick='openNav()'><div class='rangerPaysMonnaie'><img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'><h5> Couronnes tchèques (Kč)</h5></div></a>
           </div>
         <div class='langueD'>
-          <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-          <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-          <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
-          <a href='#choixLangue' onclick='openNav()'><img src='fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'></a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue' onclick='openNav()'>
+          <div class='rangerPaysMonnaie'>
+            <img src='./img/fr-3f3d5b0b269d11f3a65fe5109e0ac701.svg'>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--menu droite cacher pour la monnaies-->
+  <div id="mySidenavMonnaie" class="sidenav">
+    <div class='sidTitre'>
+      <h3>Sélectionner la monnaie</h3>
+    </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+    <div class='langueAll'>
+      <div class='langueE'>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Couronnes danoises (kr)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>*
+          <div class='rangerPaysMonnaie'>
+          <h4>CZK</h4>
+          <h5> Euros (€)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Livres sterling (£)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Couronnes norvégiennes (kr)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Zlotys polonais (zł)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Roubles russes (₽)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Couronnes suédoises (kr)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5> Francs suisses</h5>
+          </div>
+        </a>
+      </div>
+      <div class='langueD'>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+        <a href='#choixLangue'>
+          <div class='rangerPaysMonnaie'>
+            <h4>CZK</h4>
+            <h5>Couronnes tchèques (Kč)</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--bloc ils nous confiance...-->
+  <div class='div2'>
+    <h3 class='text-center div2SytleBigTitre' style="padding:35px;">Ils nous font confiance. Nous vendons leurs billets.</h3>
+    <div class='rangerLogo'>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+      <div class='petitLogo'></div>
+    </div>
+    <div class='rangerLogo2'>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+      <div class='petitLogo2'></div>
+    </div>
+    <div class='textDiv2'>
+      <div>
+        <h1 class='text-center titreBlack'>Tous les billets. Un seul guichet.</h1>
+      </div>
+      <div>
+        <h4 class='text-center div2SytleBigTitre'>Nous vendons tous les billets que vous avez l’habitude d’acheter en France </h4>
+      </div>
+      <div>
+        <h4 class='text-center div2SytleBigTitre'>et tous ceux dont vous pourriez avoir besoin à l’étranger.</h4>
+      </div>
+    </div>
+  </div>
+  <!--bloc texte et image-->
+  <div class='divImgtext'>
+    <div class='blocImgText'>
+      <div class='imgText1'>
+        <div class='img21'></div>
+      </div>
+      <div class='imgText2'>
+        <div class='text1'>
+          <h2 class='text-center titreBlack'>C’est simple et c’est tout.</h2>
+          <h4 class='text-center div2SytleBigTitre'>Consultez les horaires des trains et le prix des billets dans une interface claire. Nous comparons les prix de plusieurs transporteurs, pour que vous n’ayez pas à le faire.</h4>
         </div>
       </div>
     </div>
-
-    <div id="mySidenavMonnaie" class="sidenav">
-        <div><h3>Sélectionner un pays</h3></div>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
-        <div class='langueAll'>
-        <div class='langueE'>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Couronnes danoises (kr)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Euros (€)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Livres sterling (£)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Couronnes norvégiennes (kr)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Zlotys polonais (zł)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Roubles russes (₽)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Couronnes suédoises (kr)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5> Francs suisses</h5></div></a>
-          </div>
-        <div class='langueD'>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
-            <a href='#choixLangue'><div><h4>CZK</h4><h5>Couronnes tchèques (Kč)</h5></div></a>
+    <div class='blocImgText'>
+      <div class='imgText2'>
+        <div class='text2'>
+          <h2 class='text-center titreBlack'>La très grande vitesse. Dès l’achat du billet.</h2>
+          <h4 class='text-center div2SytleBigTitre'>Trouvez et payez vos billets sur notre site en moins de temps qu’il n’en faut pour perdre patience sur un site ordinaire. Soit à peu près 58 secondes.</h4>
+        </div>
+      </div>
+      <div class='imgText1'>
+        <div class='img22'></div>
+      </div>
+    </div>
+    <div class='blocImgText'>
+      <div class='imgText1'>
+        <div class='img23'></div>
+      </div>
+      <div class='imgText2'>
+        <div class='text1'>
+          <h2 class='text-center titreBlack'>Sans pub et sans reproche.</h2>
+          <h4 class='text-center div2SytleBigTitre'>En choisissant de ne vendre que des billets, nous avons dû laisser certaines choses de côté, comme les publicités, les messages et les erreurs incompréhensibles.</h4>
         </div>
       </div>
     </div>
-
-      <div class='div2'>
-          <h3 class='text-center div2SytleBigTitre' style="padding:35px;">Ils nous font confiance. Nous vendons leurs billets.</h3>
-          <div class='rangerLogo'>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-            <div class='petitLogo'></div>
-          </div>
-          <div class='rangerLogo2'>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
-              <div class='petitLogo2'></div>
+  </div>
+  <!--bloc payement et billets-->
+  <div class='div3B'>
+    <div class="div3">
+      <div>
+        <h3 class='text-center titreBlack' style="padding: 40px;">Comment ça marche?</h3>
+      </div>
+      <div class='payement'>
+        <div class='borderRight'>
+          <h4 class='text-center div2SytleBigTitre'>Paiement</h4>
+          <div class='payementCenter'>
+            <div class='align'>
+                <div class='cb'></div>
+                <div class='ou'>ou</div>
+                <div class='paypal'></div>
             </div>
-          <div class='textDiv2'>
-            <div>
-            <h1 class='text-center'>Tous les billets. Un seul guichet.</h1>
-          </div>
-          <div>
-            <h4 class='text-center div2SytleBigTitre'>Nous vendons tous les billets que vous avez l’habitude d’acheter en France </h4>
-          </div>
-          <div>
-            <h4 class='text-center div2SytleBigTitre'>et tous ceux dont vous pourriez avoir besoin à l’étranger.</h4>
-          </div>
-          </div>
-          </div>
-
-        <div class='divImgtext'>
-          <div class='blocImgText'>
-            <div class='imgText1'>
-                <div class='img21'></div>
-            </div>
-            <div class='imgText2'>
-                <div class='text1'>
-                  <h2 class='text-center'>C’est simple et c’est tout.</h2>
-                  <h4 class='text-center div2SytleBigTitre'>Consultez les horaires des trains et le prix des billets dans une interface claire. Nous comparons les prix de plusieurs transporteurs, pour que vous n’ayez pas à le faire.</h4>
-                </div>
-            </div>
-          </div>
-          <div class='blocImgText'>
-              <div class='imgText2'>
-                <div class='text2'>
-                    <h2 class='text-center'>La très grande vitesse. Dès l’achat du billet.</h2>
-                    <h4 class='text-center div2SytleBigTitre'>Trouvez et payez vos billets sur notre site en moins de temps qu’il n’en faut pour perdre patience sur un site ordinaire. Soit à peu près 58 secondes.</h4>
-                </div>
-              </div>
-              <div class='imgText1'>
-                  <div class='img22'></div>
-              </div>
-            </div>
-            <div class='blocImgText'>
-                <div class='imgText1'>
-                    <div class='img23'></div>
-                </div>
-                <div class='imgText2'>
-                    <div class='text1'>
-                        <h2 class='text-center'>Sans pub et sans reproche.</h2>
-                        <h4 class='text-center div2SytleBigTitre'>En choisissant de ne vendre que des billets, nous avons dû laisser certaines choses de côté, comme les publicités, les messages et les erreurs incompréhensibles.</h4>
-                    </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="div3">
-          <div>
-            <h3 class='text-center'>Comment ça marche?</h3>
-          </div>
-          <div class='payement'>
-            <div class='borderRight'>
-                <h4 class='text-center div2SytleBigTitre'>Paiement</h4>
-                <div class='payementCenter'>
-              <div class='align'>
-                  <div class='cb'></div>
-                  <div class='ou'>ou</div>
-                  <div class='paypal'></div>
-              </div>
-              <h4 class='text-center div2SytleBigTitre'>Nous soignons et sécurisons vos achats 
+            <h4 class='text-center div2SytleBigTitre'>Nous soignons et sécurisons vos achats 
                   comme s’ils n’avaient pas de prix.</h4>
-            </div>
           </div>
-            <div class='borderLeft'>
-                <h4 class='text-center div2SytleBigTitre'>Billets</h4>
-                <div class='payementCenter'>
-              <div class='align'>
-                  <div class='billet'></div>
-                  <div class='ou'>ou</div>
-                  <div class='pdf'></div>
-              </div>
-              <h4 class='text-center div2SytleBigTitre'>Vous obtenez un billet cartonné à retirer en gare 
+        </div>
+        <div class='borderLeft'>
+          <h4 class='text-center div2SytleBigTitre'>Billets</h4>
+          <div class='payementCenter'>
+            <div class='align'>
+              <div class='billet'></div>
+              <div class='ou'>ou</div>
+              <div class='pdf'></div>
+            </div>
+            <h4 class='text-center div2SytleBigTitre'>Vous obtenez un billet cartonné à retirer en gare 
                   ou un e-billet à imprimer chez vous.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--bloc vert-->
+  <div class='div4'>
+    <div style="padding-top: 65px;">
+      <h1 class='text-center titreUpWhite'>Allez-y (aussi) en bus</h1>
+      <h4 class='text-center div4h4center titreN'>Nous vendons également des billets de bus pour que vous ayez le choix, sans l’embarras.</h4>
+      <div class='imgDiv4'></div>
+    </div>
+  </div>
+  <!--bloc twitter-->
+  <div class='div5'>
+    <h1 class='text-center titreBlack recadreDiv5'>Demandez conseil à nos utilisateurs.</h1>
+    <h4 class='text-center div5cadre'>Tout le marketing du monde ne remplacera jamais ce que nos utilisateurs disent de nous. C’est encore eux qui parlent le mieux de notre service.</h4>
+    <div class='div5Center'>
+      <div class='div5Flex'>
+        <div class='contenu'></div>
+        <div class='contenu'></div>
+        <div class='contenu'></div>
+      </div>
+    </div>
+    <div>
+      <a href="" ><h5 class="text-center lienDiv5" style="margin: 20px 0px 40px 0">PLUS D'AMOUR</h5></a>
+      <div>
+        <div class="div5ImgC">
+          <a href="https://www.trainline.fr/press">
+          <div class='div5FlexImg'>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/france2-426c29639e964b6b8131b2234de3fa0e.png" alt="france2" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/20min-dee5c2ef164835bc76e9bf418954ce06.png" alt="20 minutes" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/canalplus-3b6414c4f6fead5711bf008ec8f09c21.png" alt="canal +" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/challenges-d3f3161570179835b0735642742763ef.png" alt="challenge" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/figaro-13b783c88bd90131113156f4028dfee5.png" alt="figaro" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/lci-0e0a2cba409560b2eb6b9e7563930181.png" alt="lci" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/lemonde-bb82c17ccd314dffc91373f3d72104fb.png" alt="le monde" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/ouifm-62b6adbb090d1496b440ba9ce15873f3.png" alt="oui fm" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/parisien-5ff202730d637a2c595eeb976c133c40.png" alt="le parisien" style="height: 25px;">
+            </div>
+            <div style="padding: 5px 15px 5px 15px;">
+              <img src="https://assets.trainline.eu/assets/images/open-home/press/techcrunch-55076242894a2d1ff551f1f6765f5ef7.png" alt="techcrunch" style="height: 25px;">
             </div>
           </div>
-            </div>
-          </div>
-
-          <div class='div4'>
-            <div style="padding-top: 65px;">
-            <h1 class='text-center'>Allez-y (aussi) en bus</h1>
-            <h4 class='text-center div4h4center'>Nous vendons également des billets de bus pour que vous ayez le choix, sans l’embarras.</h4>
-            <div class='imgDiv4'></div>
-          </div>
-          </div>
-
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--bloc bleu-->
+  <div class='div6'>
+    <div style="padding-top: 50px;">
+      <h1 class='text-center titreUpWhite'>Montez à bord !</h1>
+      <h4 class='text-center titreN'>Arrêtez de vous prendre la tête. Prenez le train.</h4>
+      <div class='centerBouton'>
+        <a href="#haut">
+          <button class='btn'>RÉSERVEZ UN BILLET</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--flooder avec les liens-->
+  <div  class='div7'style="background-color: #f5f5f5">
+    <div class='cadreDiv7'>
+      <div class='div7ranger'>
+        <div>
+        <img src="https://assets.trainline.eu/assets/images/trainline-logo-cf635433ef235d4f4eb00da841ad174c.svg" width="85px" height='30px;' alt="logo">
+          <a href="#">
+            <div class='lienDiv7' >Contacter Trainline</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Site d'aide</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Qui sommes-nous ?</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Informations presse & Blog</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Pour les entreprises</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Offres d’emploi</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >CGV & Informations légales</div>
+          </a>
+          <a href="#">
+            <div class='lienDiv7' >Données personnelles & Cookies</div>
+          </a>
+        </div>
+        <div class='divApp'>
+          <div class='appAutre'>Chaque mois, plus de 16,5 millions de personnes visitent les sites ou applications Trainline.</div>
+          <a href="https://www.trainline.fr/information/trainline-eu-app" >
+            <div class='lienDiv7'>Téléchargez l’app.</div>
+          </a>
           <div>
-            <h1></h1>
-            <h4></h4>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div>
-              <a href="">
-                <div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </a>
-            </div>
+            <a href="https://itunes.apple.com/fr/app/id599502670">
+              <div class ='imgApp1'></div>
+            </a>
           </div>
+          <div>
+            <a href="https://play.google.com/store/apps/details?id=com.capitainetrain.android&hl=fr">
+              <div class ='imgApp2'></div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <a href="#"><div class='lienDiv71' >Destinations</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Paris</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Lyon</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Nice</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Marseille</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Bordeaux</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Toulouse</div></a>
+          <a href="#"><div class='lienDiv7' >Trains pour Montpellier</div></a>
+        </div>
+        <div>
+          <a href="#"><div class='lienDiv71' >Horaires</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Marseille</div></a>
+          <a href="#"><div class='lienDiv7' >Marseille – Paris</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Lyon</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Bordeaux</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Toulouse</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Lille</div></a>
+          <a href="#"><div class='lienDiv7' >Paris – Londres</div></a>
+        </div>
+        <div>
+          <a href="#"><div class='lienDiv71' >Gares</div></a>
+          <a href="#"><div class='lienDiv7' >Paris Gare du Nord</div></a>
+          <a href="#"><div class='lienDiv7' >Paris Gare de Lyon</div></a>
+          <a href="#"><div class='lienDiv7' >Paris Gare Montparnasse</div></a>
+          <a href="#"><div class='lienDiv7' >Paris Gare de l’Est</div></a>
+          <a href="#"><div class='lienDiv7' >Lyon Part-Dieu</div></a>
+          <a href="#"><div class='lienDiv7' >Paris Gare St-Lazare</div></a>
+          <a href="#"><div class='lienDiv7' >Marseille St-Charles</div></a>
+        </div>
+        <div>
+          <a href="#"><div class='lienDiv71' >Voyager en train</div></a>
+          <a href="#"><div class='lienDiv7' >Cartes & abonnements SNCF</div></a>
+          <a href="#"><div class='lienDiv7' >Trains en France</div></a>
+          <a href="#"><div class='lienDiv7' >Trains en Espagne</div></a>
+          <a href="#"><div class='lienDiv7' >Trains en Italie</div></a>
+          <a href="#"><div class='lienDiv7' >Trains en Allemagne</div></a>
+          <a href="#"><div class='lienDiv7' >Pass Interrail</div></a>
+          <a href="#"><div class='lienDiv7' >Eurostar</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--flooder final-->
+  <div class='div8'>
+    <div class='div8place'>
+      <div class='div8A'>
+        <h5 class='ecart'>Suivez-nous</h5>
+        <div class='ecart'>
+          <a href="https://www.facebook.com/trainline.fr"><img src="https://assets.trainline.eu/assets/images/footer/seo/facebook-845e0f46ff9016203d5e6786a33396f2.svg" alt="facebook"></a>
+        </div>
+        <div>
+          <a href="https://twitter.com/trainline_fr"><img src="https://assets.trainline.eu/assets/images/footer/seo/twitter-e23662441d4b97c1639c49bb44f7388a.svg" alt="twitter"></a>
+        </div>
+      </div>
+      <div class='div8Left'>
+        <div>
+          <img src="https://assets.trainline.eu/assets/images/footer/seo/apple-pay-logo-9ae0cfc509e5cdfb136913a153b7043e.svg" alt="apple">
+        </div>
+        <div style="margin-left: 20px;">
+          <img src="https://assets.trainline.eu/assets/images/footer/seo/paypal-logo-cc1f95a91a1f56b951a3b6d89c8a9e86.svg" alt="paypal">
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <div class='div6'>
-              <div style="padding-top: 50px;">
-              <h1 class='text-center'>Montez à bord !</h1>
-              <h4 class='text-center'>Arrêtez de vous prendre la tête. Prenez le train.</h4>
-              <div class='centerBouton'>
-              <a href="#haut"><button class='btn'>RÉSERVEZ UN BILLET</button></a>
-              </div>
-            </div>
-            </div>
-
-            <div>
-              <div>
-                <div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
   </body>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src='js.js'></script>

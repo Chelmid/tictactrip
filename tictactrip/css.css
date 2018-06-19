@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /*barre header*/
 .barreHeader{
     background-color: #3d506b;
@@ -41,8 +46,14 @@ button{
 
 .logo{
     margin: auto;
-    margin-left: 21vw;
+    margin-left: 16vw;
     text-decoration: none;
+}
+.logoImg{
+    background: url("https://assets.trainline.eu/assets/images/trainline-logo-white-8f87ae08035d6750c1a5e836909ecd1a.svg") left center no-repeat;
+    width: 100px;
+    height: 18px;
+
 }
 
 .headerBouton{
@@ -60,6 +71,20 @@ a:visited {
 }
 
 /*police et couleur*/
+
+.titreUpWhite{
+    font-weight: bold;
+    color: white;
+}
+
+.titreN{
+    color: white;
+}
+
+.titreBlack{
+    color: black;
+    font-weight: bold;
+}
 
 .div2SytleBigTitre{
     color:#9b8a8c;
@@ -121,6 +146,14 @@ titrehaut{
     display: flex;
 }
 
+.rangerPaysMonnaie{
+    display: flex;
+}
+
+.sidTitre{
+    margin-left: 30px;
+}
+
 .img1{
     background-image: url('https://assets.trainline.eu/assets/images/open-home/covers/cover-beach-8dc53adfd913bec45958b705ec6369fa.jpg');
     background-repeat: no-repeat;
@@ -145,16 +178,16 @@ titrehaut{
 
 .carreRecherche{
     background-color: #ffffff;
-    padding-left: 2.5%;
+    padding-left: 3%;
     border-radius: 5px;
-    width: 27vw;
+    width: 33%;
     height: 50vh;
     margin: 0 12px 0 12px;
 }
 
 .resultatVille{
     border: 0.5px solid #8f9cb3;
-    width: 22vw;
+    width: 26vw;
     height: 5vh;
     color: #848b8e;
     border-radius: 2px;
@@ -172,14 +205,14 @@ titrehaut{
 }
 
 .inputDA{
-    width: 22vw;
+    width: 26vw;
     height: 5vh;
     border-radius: 2px;
     padding-left: 10px;
 }
 
 .inputAge{
-    width: 19vw;
+    width: 22vw;
     height: 5vh;
 
 }
@@ -187,7 +220,7 @@ titrehaut{
 .sup{
     background-color: #ffffff;
     color: #01c3a7;
-    width: 3vw;
+    width: 4vw;
     height: 5vh;
 }
 
@@ -197,11 +230,11 @@ titrehaut{
 
 /*date*/
 .ui-datepicker{
-    left: 52.2vw !important;
+    left: 52.6vw !important;
     position: fixed !important;
-    top: 40vh !important;
-    width: 23vw;
-    height: 30vh;
+    top: 42vh !important;
+    width: 28vw;
+    height: 32vh;
     padding-top: 25px;
 }
 
@@ -211,7 +244,7 @@ titrehaut{
 .div2{
     position: relative;
     top: -100px;
-    width: 56%;
+    width: 67%;
     background-color: #ffffff;
     margin: auto;
     border-radius: 5px;
@@ -322,11 +355,13 @@ titrehaut{
     padding: 10vw;
 }
 
-.divImgtext{
-    margin-bottom: 7vw
-}
-
 /*div  payement*/
+
+.div3B{
+    background: white url('https://assets.trainline.eu/assets/images/open-home/dots-pattern-9924c5c6be38a8d865f151c97c18d898.png') repeat;
+    width: 100%;
+    height: 360px;
+}
 
 .div3{
     background: white url('https://assets.trainline.eu/assets/images/open-home/dots-pattern-9924c5c6be38a8d865f151c97c18d898.png') repeat;
@@ -416,11 +451,154 @@ titrehaut{
 .div6{
     background-color: #3f618b;
     height:270px;
-    widows: 100%;
+    width: 100%;
 }
 
 .centerBouton{
     margin: auto;
     width: 20vh;
     margin-top:20px;
+}
+
+/*div7*/
+
+.div7ranger{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lienDiv7{
+    margin: 10px;
+    color: #3773cc;
+    font-size: 11px;
+}
+
+.lienDiv7:hover{
+    color: #17148f;
+}
+
+.cadreDiv7{
+    margin:auto;
+    width: 100vh;
+}
+
+.lienDiv71{
+    margin: 10px;
+    color: #3773cc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lienDiv71:hover{
+    color: #17148f;
+}
+
+.divApp{
+    width: 15%;
+}
+
+.appAutre{
+    margin: 10px;
+    font-size: 11px;
+}
+
+.imgApp1{
+    background: url('https://assets.trainline.eu/assets/images/open-home/fr/app_store-982918c20bc831835da249d342f31bbd.svg');
+    width: 135px;
+    height: 39px;
+}
+
+.imgApp2{
+    background: url('https://assets.trainline.eu/assets/images/open-home/fr/google_play-5397aa8a86e85cf8920c5580245fd572.svg');
+    width: 135px;
+    height: 39px;
+}
+
+/*div8*/
+
+.div8{
+    height: 130px;
+    width: 100%;
+}
+
+.div8place{
+    margin: auto;
+    width: 98vh;
+    display: flex;
+    padding-top: 50px;
+}
+
+.div8A{
+    display: flex;
+    margin: auto;
+    width: 98vh;
+}
+
+.div8Left{
+    display: flex;
+    margin: 0 auto;
+    width: 34%;
+}
+
+.ecart{
+    margin-right: 20px;
+}
+
+
+/*div5*/
+
+.div5cadre{
+    width: 55%;
+    margin: auto;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.div5{
+    width: 100%;
+    height: 790px;
+    background-color: #f5f6f7;
+}
+
+.recadreDiv5{
+    margin-top: 0px;
+    padding-top: 60px;
+}
+
+.contenu{
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #c0c9cc;
+    margin: 0 20px 20px 0;
+}
+
+.div5Center{
+    margin: auto;
+    width: 50%;
+}
+
+.div5Flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 150%;
+}
+
+.lienDiv5{
+    color: #3773cc;
+}
+
+.lienDiv5:hover{
+    color: #17148f;
+}
+
+.div5FlexImg{
+    display: inline-flex;
+    background-color: white;
+}
+
+.div5ImgC{
+    margin: auto;
+    width: 115vh;
 }

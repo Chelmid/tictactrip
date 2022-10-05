@@ -4,3 +4,5 @@ reproduction du site et affichage la liste des villes avec un API (L'API qui n'e
 
 Les language utilisés  :
 * php
+* javascript
+* css
